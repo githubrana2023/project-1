@@ -7,18 +7,14 @@
 
 :root {
   --main-color: #ff5959;
-  --bg-color:#FAFAFA;
-  --second-bg-color:#FFEEEE;
+  --bg-color: #fafafa;
+  --second-bg-color: #ffeeee;
   --header-text: #121212;
   --p-text: #707070;
   --food-color: #4f9da61a;
   --shelter-color: #ff59591a;
   --education-color: #fff4d6;
 }
-
-
-
-
 
 /* !header section---------------start-------------- */
 
@@ -62,6 +58,7 @@ header div p {
   color: #fff;
   position: relative;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -70,83 +67,192 @@ header div p {
   border: 2px solid var(--main-color);
 }
 
-
-
-
 /* !donate today & our donate plan----------start--------*/
 
-
 section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.donate-today {
-  text-align: center;
 }
 
-.donate-today{
+.donate-today {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 560px;
+  align-items: center;  
 }
 
 .donate-today h2 {
   font-weight: 800;
   font-size: 54px;
-  margin-top: 60px;
+  margin-top: 40px;
   color: var(--header-text);
 }
 
-.donate-today>p {
+.donate-today > p {
+  width: 600px;
   color: var(--p-text);
-  font-size: 18px;  
-  margin: 30px 0 50px;
-}
-
-.donate-today>div{
-  display: block;
-  border-bottom: 3px solid var(--main-color);
-}
-
-.donate-today>div .p{
-  color: #B3B3B3;
   font-size: 18px;
-  background: none;
-  margin:50px 0 10px;
-  padding: 0;
+  margin: 30px 0 50px;
+  text-align: center;
 }
-.donate-today div div{
+
+.donate-today > div #number {
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 30px;
+  height: 80px;
+  margin: 50px 0 10px;
+  padding: 20px;
+  text-align: center;
+  border: none;
+  border-bottom: 3px solid var(--main-color);
+  outline: none;
+  width: 100%;
+}
+
+#number::placeholder {
+  color: var(--main-color);
+}
+.donate-today div div {
   display: flex;
   align-items: center;
   gap: 30px;
 }
 
-.donate-today div p{
-  padding: 36px 18px;
+.donate-today div p {
+  padding: 36px 30px;
   background: var(--bg-color);
   font-size: 30px;
   font-weight: 700;
 }
 
-.donate-today div div>p:nth-child(2){
+.donate-today div div > p:nth-child(2) {
   background: var(--second-bg-color);
   border: 3px solid var(--main-color);
   color: var(--main-color);
   border-radius: 5px;
 }
 
+.donate-today .btn {
+  margin-top: 40px;
+}
 /* !donate today ----------finished---------- */
 
-
-.donate-plan{
+/*!donate plan section -------------------start-------------------  */
+.donate-plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
   text-align: center;
-  margin-top: 80px;
 }
 
-.donate-plan>div{
-  width: 690px;
+.donate-plan .donate-plan-top-div h2 {
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--header-text);
 }
+
+.donate-plan .donate-plan-top-div p {
+  color: var(--p-text);
+  width: 690px;
+  margin-top: 30px;
+}
+
+.donate-plan-bottom-div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+  margin-top: 100px;
+  padding: 0 8%;
+}
+
+.donate-plan-templete {
+  width: 360px;
+  height: 352px;
+  border-radius: 10px;
+}
+
+.donate-plan-bottom-div div:nth-child(1) {
+  background-color: rgba(79, 157, 166, 0.1);
+}
+.donate-plan-bottom-div div:nth-child(2) {
+  background: rgba(255, 89, 89, 0.1);
+}
+.donate-plan-bottom-div div:nth-child(3) {
+  background: #fff4d6;
+}
+
+.donate-plan-templete img {
+  margin: 63px 0 20px 23px;
+}
+
+.donate-plan-templete h3,
+.donate-plan-templete p {
+  margin: 0 23px 0;
+}
+
+.donate-plan-templete h3 {
+  font-size: 25px;
+  color: var(--header-text);
+  margin-bottom: 30px;
+}
+.donate-plan-templete p {
+  color: var(--p-text);
+}
+
+/*!donate plan section -------------------finished-------------------  */
+
+/*!article section -------------------start-------------------  */
+.donation-div {
+  width: 100%;
+  height: 100vh;
+  padding: 0 8%;
+}
+
+.donation-div>.donation-content{
+  margin-bottom: 60px;
+}
+
+.donation-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.donation-content div{
+  width: 500px;
+  height: 375px;
+  text-align: start;
+  padding-right: 10px;
+}
+
+.donation-content h2{
+  font-weight: 800;
+  font-size: 45px;
+  color: var(--header-text);
+}
+
+.donation-content p{
+  color: var(--p-text);
+  margin: 30px 0;
+
+}
+
+.donation-content img {
+  width: 377px;
+  height: 356px;
+  border-radius: 10px;
+}
+
+
+
+/* !footer section----------------------start------  */
+
